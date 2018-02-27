@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 
 app.use('/api',routes);
 
-app.listen(process.env.port || 4000)
+app.listen(process.env.port || 4000 , ()=> console.log('le serveur est partie.'))
 
 app.use((err, req, res, next)=>{
   res.status(422).send({error: err.message})
